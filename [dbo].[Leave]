@@ -13,8 +13,8 @@ CREATE TABLE [dbo].[Leave](
 	[EmpID] [int] NOT NULL,
 	[LeaveType] [varchar](40) NOT NULL,
 	[NoOfDays] [int] NOT NULL,
-	[StartDate] [int] NOT NULL,
-	[EndDate] [int] NOT NULL,
+	[StartDate] [date] NOT NULL,
+	[EndDate] [date] NOT NULL,
 	[Status] [bit] NOT NULL,
  CONSTRAINT [PK_Leave] PRIMARY KEY CLUSTERED 
 (
