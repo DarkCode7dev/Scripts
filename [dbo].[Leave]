@@ -1,0 +1,33 @@
+USE [hrm]
+GO
+
+/****** Object:  Table [dbo].[Leave]    Script Date: 1/18/2020 10:07:44 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Leave](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[EmpID] [int] NOT NULL,
+	[LeaveType] [varchar](40) NOT NULL,
+	[NoOfDays] [int] NOT NULL,
+	[StartDate] [int] NOT NULL,
+	[EndDate] [int] NOT NULL,
+	[Status] [bit] NOT NULL,
+ CONSTRAINT [PK_Leave] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Leave]  WITH CHECK ADD  CONSTRAINT [FK_Leave_Employee] FOREIGN KEY([Id])
+REFERENCES [dbo].[Employee] ([EmpID])
+GO
+
+ALTER TABLE [dbo].[Leave] CHECK CONSTRAINT [FK_Leave_Employee]
+GO
+
+
