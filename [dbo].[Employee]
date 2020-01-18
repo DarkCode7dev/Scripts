@@ -1,0 +1,36 @@
+USE [hrm]
+GO
+
+/****** Object:  Table [dbo].[Employee]    Script Date: 1/18/2020 10:06:44 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Employee](
+	[EmpID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NOT NULL,
+	[Father_Name] [varchar](50) NOT NULL,
+	[Mother_Name] [varchar](50) NOT NULL,
+	[DOB] [date] NOT NULL,
+	[Gender] [nchar](10) NOT NULL,
+	[Nationality] [varchar](50) NOT NULL,
+	[Maritual_status] [nchar](10) NOT NULL,
+	[Mobile] [varchar](10) NOT NULL,
+	[Email] [nvarchar](50) NOT NULL,
+	[Password] [nvarchar](50) NOT NULL,
+	[image] [nvarchar](50) NOT NULL,
+	[Present_address] [nvarchar](max) NOT NULL,
+	[permanent_address] [nvarchar](50) NOT NULL,
+	[Designation] [nvarchar](50) NULL,
+	[Gross_Salary] [numeric](18, 0) NULL,
+	[Hr_Id] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[EmpID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
