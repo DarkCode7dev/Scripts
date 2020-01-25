@@ -1,0 +1,27 @@
+USE [hrm]
+GO
+
+/****** Object:  Table [dbo].[Events]    Script Date: 1/25/2020 10:06:48 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Events](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[EmpId] [int] NOT NULL,
+	[Subject] [nvarchar](100) NOT NULL,
+	[Description] [nvarchar](200) NOT NULL,
+	[Start] [datetime] NOT NULL,
+	[End] [datetime] NULL,
+	[ThemeColor] [nvarchar](10) NULL,
+	[IsFullDay] [bit] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
