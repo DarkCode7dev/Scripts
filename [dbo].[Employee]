@@ -1,7 +1,7 @@
 USE [hrm]
 GO
 
-/****** Object:  Table [dbo].[Employee]    Script Date: 1/18/2020 10:06:44 PM ******/
+/****** Object:  Table [dbo].[Employee]    Script Date: 1/25/2020 10:05:47 AM ******/
 SET ANSI_NULLS ON
 GO
 
