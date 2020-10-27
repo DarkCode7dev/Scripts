@@ -1,0 +1,51 @@
+Use newdb;
+
+create procedure spGetEmployees
+as
+begin
+select Name,Gender from Employee_Details;
+end
+
+spGetEmployees
+
+create procedure spGetEmployeesById
+@id int
+as 
+begin
+select * from Employee_Details where id =@id;
+end
+
+spGetEmployeesById 2;
+
+create procedure spGetEmloyeeByIDAndName
+@id int,
+@Name varchar(50)
+as
+begin 
+select * from Employee_Details where id = @id and 
+Name = @Name;
+end
+
+execute spGetEmloyeeByIDAndName 6, 'Heema';
+sp_helptext spGetEmloyeeByIDAndName ;
+
+
+alter procedure spGetEmloyeeByIDAndName
+@id int,
+@Name varchar(50)
+with encryption
+as
+begin 
+select * from Employee_Details where id = @id and 
+Name = @Name;
+end
+
+
+alter procedure spGetEmloyeeByIDAndName
+@id int,
+@Name varchar(50)
+as
+begin 
+select * from Employee_Details where id = @id and 
+Name = @Name;
+end
