@@ -1,0 +1,24 @@
+create database Batch
+
+use Batch
+
+create table Hello(id int , name varchar(20), lastname varchar(20), salary money, age int)
+
+insert into Hello values(123, 'gaurav' , 'tomar' , 40000,24)
+
+insert into Hello values(111, 'sachin' , 'sharma' , 40000,24)
+
+insert into Hello values(115, 'ram' , 'garg' , 25000,29)
+
+insert into Hello values(145, 'utkarsh' , 'tyagi' , 50000,32)
+
+select * from Hello
+
+delete from Hello where id=123
+
+delete from Hello -- table will remain data will be deleted
+
+truncate table Hello --
+
+update Hello set salary = 80000 where id = 115
+
