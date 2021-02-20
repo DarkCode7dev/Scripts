@@ -33,6 +33,40 @@ update Hello set salary = 80000 where id = 115
   select * from Hello
 
   update Hello set TaxSal = salary* tax /100
+  
+  
+  
+  Use Batch
+Select * from Hello
+
+delete from Hello where id=123
+
+insert into Hello values(116, 'praveen' , 'kumar' , 25000,29,18,1800)
+
+create table Hello2(id int, name varchar(20), contact int)
+Select * from Hello2
+
+insert into Hello2 values (111, 'arvind', 98988898)
+
+insert into Hello2 values (120, 'harshit', 98983498)
+
+insert into Hello2 values (115, 'sone', 98988876)
+
+insert into Hello2 values (110, 'rohan', 98988876)
+
+select * from Hello as e1 left join Hello2 as e2 on e1.id=e2.id
+
+select * from Hello as e1 right join Hello2 as e2 on e1.id=e2.id
+
+Select * from Hello as e1 inner join Hello2 as e2 on e1.id=e2.id
+
+Select * from Hello as e1 full join Hello2 as e2 on e1.id=e2.id
+
+Select * from Hello  cross join Hello2 
+
+Select * from Hello,Hello2
+
+
 
   select id , salary ,age , TaxSal from Hello
 
