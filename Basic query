@@ -22,3 +22,38 @@ truncate table Hello --
 
 update Hello set salary = 80000 where id = 115
 
+
+  update Hello  set name='praveen' , lastname='kumar', salary='1000' where id=123
+
+  alter table Hello add TaxSal int
+
+    alter table Hello add tax int
+
+  update Hello set tax =5 where id =145
+  select * from Hello
+
+  update Hello set TaxSal = salary* tax /100
+
+  select id , salary ,age , TaxSal from Hello
+
+  select * from Hello where name='ram'
+
+  select * from Hello where salary = 5000 and salary=20000
+
+  --like 
+
+  select * from Hello where name like '%s'
+
+  select * from Hello where name like 's%'
+
+  select * from Hello where name like '%a%'
+
+
+  --in
+
+  select * from Hello where name in('sahin','ram','govind','utkarsh')
+
+  ----between
+
+  select * from Hello where salary between 15000 and 300000
+
