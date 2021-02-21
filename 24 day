@@ -1,0 +1,53 @@
+use batch
+
+select * from Hello
+
+select * from Hello order by name  -- in Ascending order
+
+select * from Hello order by name desc -- in descending order
+
+create table EmpDep(id int,name varchar(20),salary int ,Dept varchar(20))
+
+insert into EmpDep values(123,'yug',9000,'IT')
+
+insert into EmpDep values(406,'sachin',9000,'IT')
+
+insert into EmpDep values(111,'Akash',9000,'IT')
+
+insert into EmpDep values(119,'Akash',15000,'sales')
+
+--select Dept,sum(salary) from EmpDep group by Dept 
+----select Dept,sum(salary) from EmpDep group by Dept 
+--- select * from EmpDep
+-- select max(salary) from EmpDep
+-- select min(salary) from EmpDep
+--select count(id) from EmpDep
+--select count(*) from EmpDep
+-- select sum(salary) from EmpDep
+--select * from EmpDep Where salary=(select max(salary) from EmpDep where salary<select max(salary) from EmpDep)
+
+select id,salary,Dept from EmpDep
+
+Select * from EmpDep
+
+
+
+create view emp as select id , name , Dept from EmpDep 
+
+Select * from emp
+
+drop view emp
+
+create view emp as select id , name , Dept from EmpDep 
+
+delete from emp where id=111
+
+update emp set name ='utkarsh' where id=406
+
+
+
+
+
+
+
+
