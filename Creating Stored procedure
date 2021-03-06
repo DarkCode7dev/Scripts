@@ -1,0 +1,51 @@
+use batch
+
+Select * from hello
+
+--STORED PROCEDURE WHEN WE USE THE 
+
+create procedure ducat
+as
+select * from hello
+go
+
+
+exec ducat
+
+drop procedure ducat
+
+create procedure ducat
+as
+select * from hello where id=116
+go
+
+
+drop procedure ducat
+
+create procedure ducat
+@id int 
+as 
+select * from hello where id=@id
+go
+
+ducat 116
+
+
+drop procedure ducat
+
+create procedure ducat
+@id int , @name varchar(20)
+as select * from hello where id=@id and name=@name
+go
+
+exec ducat @id=116 , @name='praveen'
+drop procedure ducat
+
+create procedure ducat
+as
+select * from hello
+select * from hello where id=116
+go
+
+
+exec ducat
