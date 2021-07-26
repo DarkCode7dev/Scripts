@@ -1,0 +1,12 @@
+
+select * from Hello as e1 left join Hello2 as e2 on e1.id=e2.id
+
+select * from Hello as e1 right join Hello2 as e2 on e1.id=e2.id
+
+Select * from Hello as e1 inner join Hello2 as e2 on e1.id=e2.id
+
+Select * from Hello as e1 full join Hello2 as e2 on e1.id=e2.id
+
+Select * from Hello  cross join Hello2 
+
+Select * from Hello,Hello2
