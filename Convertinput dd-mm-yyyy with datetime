@@ -1,4 +1,4 @@
-CREATE PROCEDURE sp_select_records_by_date_range
+Here date is in varchar.                          CREATE PROCEDURE sp_select_records_by_date_range
     @start_date NVARCHAR(10),
     @end_date NVARCHAR(10)
 AS
