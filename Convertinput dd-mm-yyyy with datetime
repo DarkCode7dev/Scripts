@@ -1,0 +1,11 @@
+CREATE PROCEDURE sp_select_records_by_date_range
+    @start_date NVARCHAR(10),
+    @end_date NVARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT *
+    FROM table_name
+    WHERE datetime_column BETWEEN CONVERT(datetime, @start_date, 103) AND CONVERT(datetime, @end_date, 103);
+END
